@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="rounded-lg bg-gradient-to-br from-campus-purple to-campus-teal p-1.5">
             <Calendar className="h-5 w-5 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-gradient">Campus<span className="font-normal">Events</span>Genius</span>
+          <span className="text-xl font-bold tracking-tight text-gradient">Ease<span className="font-normal">Eve</span></span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-1">
