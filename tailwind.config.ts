@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Campus Events Genius custom colors
+                campus: {
+                    navy: '#121A2B',
+                    purple: '#6B46C1',
+                    purpleLight: '#805AD5',
+                    teal: '#38B2AC',
+                    gold: '#D69E2E',
+                    dark: '#0F172A',
+                    darkAlt: '#1E293B',
+                    card: '#1E293B',
+                    cardHover: '#2D3748',
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,26 +83,38 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+                'float': {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' }
+                },
+                'pulse-subtle': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.8' }
+                },
+                'glow': {
+                    '0%, 100%': { boxShadow: '0 0 5px rgba(107, 70, 193, 0.5)' },
+                    '50%': { boxShadow: '0 0 20px rgba(107, 70, 193, 0.8)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'float': 'float 6s ease-in-out infinite',
+                'pulse-subtle': 'pulse-subtle 4s ease-in-out infinite',
+                'glow': 'glow 2s ease-in-out infinite'
+			},
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'hero-pattern': 'linear-gradient(90deg, rgba(18,26,43,0.95) 0%, rgba(18,26,43,0.9) 100%), url("/campus-bg.jpg")',
+                'card-gradient': 'linear-gradient(135deg, rgba(107,70,193,0.2) 0%, rgba(56,178,172,0.1) 100%)',
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
