@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import MainLayout from '@/components/layout/MainLayout';
 import EventCard from '@/components/events/EventCard';
-import { mockEvents } from '@/services/mockData';
+import { events } from '@/services/mockData';
 import { Calendar, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -12,11 +12,11 @@ const Index = () => {
   const filteredEvents = () => {
     switch (filter) {
       case 'upcoming':
-        return mockEvents.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        return events.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
       case 'popular':
-        return mockEvents.sort((a, b) => b.votes - a.votes);
+        return events.sort((a, b) => b.votes - a.votes);
       default:
-        return mockEvents;
+        return events;
     }
   };
 
